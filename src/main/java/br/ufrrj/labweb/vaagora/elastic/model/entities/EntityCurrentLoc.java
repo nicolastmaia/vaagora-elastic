@@ -15,7 +15,7 @@ import javax.persistence.Table;
 public class EntityCurrentLoc {
 	
 	@Id
-	@Column(name = "loc_id")
+	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int id;
 	
@@ -25,7 +25,7 @@ public class EntityCurrentLoc {
 	@Column(name = "longitude")
 	private Double longitude;
 	
-	@OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+	@OneToOne(mappedBy = "location")
 	private EntityUser user;
 
 	/**
@@ -54,20 +54,6 @@ public class EntityCurrentLoc {
 	 */
 	public void setLongitude(Double longitude) {
 		this.longitude = longitude;
-	}
-
-	/**
-	 * @return the user
-	 */
-	public EntityUser getUser() {
-		return user;
-	}
-
-	/**
-	 * @param user the user to set
-	 */
-	public void setUser(EntityUser user) {
-		this.user = user;
 	}
 
 }
