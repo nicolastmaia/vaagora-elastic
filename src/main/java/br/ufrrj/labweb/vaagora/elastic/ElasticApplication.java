@@ -1,4 +1,4 @@
-package br.vaagora.elastic;
+package br.ufrrj.labweb.vaagora.elastic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
