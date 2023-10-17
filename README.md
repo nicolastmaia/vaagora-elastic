@@ -1,4 +1,4 @@
-# Configurando o Stack da Elastic
+# Configurando a Elastic Stack
 
 A forma mais simples que encontrei de rodar o stack foi através do Docker
 
